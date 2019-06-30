@@ -14,7 +14,7 @@ exports.onCreateNode = ({ node, actions }) => {
         id: `${node.id}-MarkdownBody`,
         parent: node.id,
         internal: {
-          type: `GithubMarkdownRemark`,
+          type: `MarkdownRemark`,
           mediaType: "text/markdown",
           content: node.context.repository.readme.text,
           contentDigest: digest(node.context.repository.readme.text)
